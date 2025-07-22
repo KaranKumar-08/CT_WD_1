@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KaranTech Quiz Challenge</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="quiz-container" id="intro-screen">
+        <div class="logo">
+            <h1>karanTech</h1>
+            <p>Internship Program</p>
+        </div>
+        <div class="intro-content">
+            <h2>Interactive Quiz Challenge</h2>
+            <p>Test your knowledge and earn your completion certificate!</p>
+            <div class="features">
+                <div class="feature">
+                    <i class="fas fa-trophy"></i>
+                    <span>Score Tracking</span>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-bolt"></i>
+                    <span>Instant Feedback</span>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-certificate"></i>
+                    <span>Earn Certificate</span>
+                </div>
+            </div>
+            <button id="start-btn" class="btn">Begin Challenge</button>
+        </div>
+    </div>
+
+    <div class="quiz-container hidden" id="quiz-screen">
+        <div class="quiz-header">
+            <div class="progress-container">
+                <div class="progress-bar" id="progress-bar"></div>
+            </div>
+            <div class="score-display">
+                <span id="score">Score: 0</span>
+            </div>
+        </div>
+        
+        <div class="question-container">
+            <h2 id="question">Question goes here</h2>
+            <div id="options" class="options-container">
+                <!-- Options will be inserted here by JavaScript -->
+            </div>
+        </div>
+        
+        <div class="feedback hidden" id="feedback">
+            <!-- Feedback will be shown here -->
+        </div>
+        
+        <button id="next-btn" class="btn hidden">Next Question</button>
+    </div>
+
+    <div class="quiz-container hidden" id="results-screen">
+        <div class="results-content">
+            <div class="certificate-badge">
+                <i class="fas fa-certificate"></i>
+            </div>
+            <h2>Quiz Completed!</h2>
+            <p>Your final score: <span id="final-score">0</span>/<span id="total-questions">0</span></p>
+            <div class="performance-message" id="performance-message">
+                <!-- Performance message will be inserted here -->
+            </div>
+            
+            <div class="certificate hidden" id="certificate">
+                <div class="certificate-header">
+                    <h1>Certificate of Completion</h1>
+                    <div class="certificate-logo">
+                        <h2>KaranTech</h2>
+                        <p>Internship Program</p>
+                    </div>
+                </div>
+                <div class="certificate-body">
+                    <p>This is to certify that</p>
+                    <h3 id="certificate-name">Participant</h3>
+                    <p>has successfully completed the karanTech Quiz Challenge</p>
+                    <div class="certificate-details">
+                        <p>Score: <span id="certificate-score">0</span>/<span id="certificate-total">0</span></p>
+                        <p>Date: <span id="certificate-date">July 10, 2025</span></p>
+                    </div>
+                </div>
+                <div class="certificate-footer">
+                    <div class="signature">
+                        <p>____________________________</p>
+                        <p>KaranTech Team</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="results-actions">
+                <button id="retry-btn" class="btn">Try Again</button>
+                <button id="download-btn" class="btn">Download Certificate</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
